@@ -10,16 +10,15 @@ const TodoList = () => {
     setTodo(e.target.value.toUpperCase());
   };
 
-  const id = Math.trunc(Math.random() * 9999);
   const handleOnClick = () => {
-    const todos = [...todoList, { todo, id }];
+    const todos = [...todoList, todo];
     setTodoList(todos);
     setTodo(" ");
   };
 
   const deleteTodo = (id) => {
-    const updatedTodo = todoList.filter((todo) => {
-      return todo.id !== id;
+    const updatedTodo = todoList.filter((todo, index) => {
+      return index !== id;
     });
     setTodoList(updatedTodo);
   };
@@ -40,8 +39,8 @@ const TodoList = () => {
         </button>
       </div>
       <div>
-        {todoList.map((todo) => {
-          return <Todo todo={todo} deleteTodo={deleteTodo} />;
+        {todoList.map((todo, index) => {
+          return <Todo todo={todo} deleteTodo={deleteTodo} id={index} />;
         })}
       </div>
     </div>
