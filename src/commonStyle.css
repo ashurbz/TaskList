@@ -1,0 +1,48 @@
+.input-task {
+  padding: 10px;
+  width: 40%;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.add-btn {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.input-btn-container {
+  padding: 20px;
+  align-items: center;
+}
+
+.todo-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.todo-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+}
+
+.todo {
+  font-size: x-large;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.cross {
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+}
+
+.write {
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+}
