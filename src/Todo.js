@@ -5,8 +5,6 @@ import EditTodo from "./EditTodo";
 const Todo = ({ todo, deleteTodo, id, handleTaskEdit }) => {
   const [showEditTask, setShowEditTask] = useState(false);
 
-  console.log(id);
-
   const handleDelete = () => {
     deleteTodo(id);
   };

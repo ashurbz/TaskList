@@ -24,7 +24,6 @@ const TodoList = () => {
       return todo;
     });
     setTodoList(updatedTodo);
-    console.log(todoList);
   };
 
   const deleteTodo = (id) => {
@@ -34,7 +33,6 @@ const TodoList = () => {
     setTodoList(updatedTodo);
   };
 
-  console.log(todoList);
   return (
     <div>
       <div className="input-btn-container">

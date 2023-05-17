@@ -3,8 +3,6 @@ import React, { useState } from "react";
 const EditTodo = ({ todo, handleTaskEdit, id, clickChange }) => {
   const [taskText, setTextTask] = useState(todo);
 
-  console.log(id);
-
   const handleTaskChange = (e) => {
     setTextTask(e.target.value);
   };
