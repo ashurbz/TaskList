@@ -16,6 +16,17 @@ const TodoList = () => {
     setTodo(" ");
   };
 
+  const handleTaskEdit = (id, newTodo) => {
+    const updatedTodo = todoList.map((todo, index) => {
+      if (id === index) {
+        return newTodo;
+      }
+      return todo;
+    });
+    setTodoList(updatedTodo);
+    console.log(todoList);
+  };
+
   const deleteTodo = (id) => {
     const updatedTodo = todoList.filter((todo, index) => {
       return index !== id;
@@ -40,7 +51,14 @@ const TodoList = () => {
       </div>
       <div>
         {todoList.map((todo, index) => {
-          return <Todo todo={todo} deleteTodo={deleteTodo} id={index} />;
+          return (
+            <Todo
+              handleTaskEdit={handleTaskEdit}
+              todo={todo}
+              deleteTodo={deleteTodo}
+              id={index}
+            />
+          );
         })}
       </div>
     </div>
